@@ -47,37 +47,45 @@ bool visit(char maze[][n], int route[][n], int X, int Y) {
     if(*(*(maze+Y+1)+X)=='r'&& Y+1<n) {
         if(visit(maze, route, X, Y + 1)){
             return 1;
-        }
+        }else
+            return 0;
     }else if(*(*(maze+Y)+X+1)=='r' && X+1<n){
         if(visit(maze,route,X+1,Y)){
             return 1;
-        }
+        }else
+            return 0;
     }else if(*(*(maze+Y-1)+X)=='r'&& Y-1>=0){
         if(visit(maze,route,X,Y-1)){
             return 1;
-        }
+        }else
+            return 0;
     }else if(*(*(maze+Y)+X-1)=='r'&& X-1>=0){
         if(visit(maze,route,X-1,Y)){
             return 1;
-        }
+        }else
+            return 0;
     }
     //if can't find the way trace the way back and  mark as 'b'
     *(*(maze+Y)+X)='b';
     if(*(*(maze+Y+1)+X)=='s'&& Y+1<n) {
         if(visit(maze,route,X,Y+1)){
             return 1;
-        }
+        }else
+            return 0;
     }else if(*(*(maze+Y)+X+1)=='s' && X+1<n){
         if(visit(maze,route,X+1,Y)){
             return 1;
-        }
+        }else
+            return 0;
     }else if(*(*(maze+Y-1)+X)=='s'&& Y-1>=0){
         if(visit(maze,route,X,Y-1)){
             return 1;
-        }
+        }else
+            return 0;
     }else if(*(*(maze+Y)+X-1)=='s'&& X-1>=0){
         if(visit(maze,route,X-1,Y)){
             return 1;
-        }
+        }else
+            return 0;
     }
 }

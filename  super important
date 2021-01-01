@@ -1,0 +1,7 @@
+[master 9bfb282] struct pointer homework upload -
+ 5 files changed, 197 insertions(+)
+ create mode 100644 level5_jugde.c
+ create mode 100644 look_up_word_in_dictionary.c
+ create mode 100644 matrix_addition_multiplication.c
+ create mode 100644 notice_struct_pointer.c
+ create mode 100644 struct_array.c
